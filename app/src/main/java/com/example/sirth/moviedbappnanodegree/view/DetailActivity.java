@@ -21,9 +21,6 @@ public class DetailActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        //there is a change
-
-
         MovieDetails movieDetails=(MovieDetails)getIntent().getParcelableExtra("movies");
         ImageView imageView=(ImageView)findViewById(R.id.image);
 

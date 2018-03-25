@@ -72,10 +72,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.Movies> {
                     MovieDetails movieDetails = movieDetailsList.get(getAdapterPosition());
                     intent.putExtra("parcel", movieDetails);
                     String string =movieDetails.getPoster_path();
-                    Toast.makeText(mContext,string,Toast.LENGTH_SHORT).show();
-///asfadsfd
-
-
+                    mContext.startActivity(intent);
                 }
             }
         });
