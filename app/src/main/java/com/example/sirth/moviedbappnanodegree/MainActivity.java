@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
         try {
             RetrofitClient Client = new RetrofitClient();
             RetrofitService service = Client.getClient().create(RetrofitService.class);
-
-            Call<MoviePages> call = service.getPopularMovies("59c47dc89a1ad8f06326686f3ebe7b0a");
+//TODO API KEY
+            Call<MoviePages> call = service.getPopularMovies("TODO");
             call.enqueue(new Callback<MoviePages>() {
                 @Override
                 public void onResponse(Call<MoviePages> call, Response<MoviePages> response) {
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             RetrofitClient Client = new RetrofitClient();
             RetrofitService service = Client.getClient().create(RetrofitService.class);
 /*TODO API KEY*/
-            Call<MoviePages> call = service.getTopRated("");
+            Call<MoviePages> call = service.getTopRated("TODO");
             call.enqueue(new Callback<MoviePages>() {
                 @Override
                 public void onResponse(Call<MoviePages> call, Response<MoviePages> response) {

@@ -7,4 +7,5 @@
     <color name="viewColour">#000000</color>
     <color name="appBar">#000000</color>
     <color name="white">#000000</color>
+    <color name="MyMovieTitleColor">#2f8e85</color>
 </resources>

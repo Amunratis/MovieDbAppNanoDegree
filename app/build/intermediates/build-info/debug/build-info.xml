@@ -5,44 +5,40 @@
     build-mode="COLD"
     density="hdpi"
     format="10"
-    ir-eligibility="COMPATIBLE"
     plugin-version="3.0.1"
-    timestamp="1521986955936"
+    timestamp="1522085528394"
     token="-7038139542804897028"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="2396" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="259" />
+        duration="0" />
     <task
         name="verifier"
-        duration="23" />
+        duration="0" />
 
-    <artifact
-        location="C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-        type="SPLIT" />
     <artifact
         location="C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\build\outputs\apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1521985568974"
+        timestamp="1522084196764"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-            type="SPLIT" />
         <artifact
             location="C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\build\outputs\apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
         <artifact
             location="C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
@@ -74,27 +70,17 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1521986744734"
+        ir-eligibility="METHOD_ADDED"
+        timestamp="1522085243226"
         verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-            type="SPLIT" />
         <artifact
             location="C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
-        <artifact
-            location="C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\build\outputs\apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="COMPATIBLE"
-        timestamp="1521986955936"
+        timestamp="1522085528394"
         verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
         <artifact
             location="C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\build\outputs\apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />

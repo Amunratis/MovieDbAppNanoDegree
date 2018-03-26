@@ -79,7 +79,7 @@ public class MovieDetails implements Parcelable  {
     }
 
     public String getBackdrop_path() {
-        return backdrop_path;
+        return "https://image.tmdb.org/t/p/w500" + backdrop_path;
     }
 
     public void setBackdrop_path(String backdrop_path) {
@@ -95,11 +95,11 @@ public class MovieDetails implements Parcelable  {
     }
 
     public String getOverview() {
-        return Overview;
+        return overview;
     }
 
     public void setOverview(String overview) {
-        Overview = overview;
+        this.overview = overview;
     }
 
     public String getRelease_date() {
@@ -114,8 +114,8 @@ public class MovieDetails implements Parcelable  {
     private String poster_path;
     @SerializedName("adult")
     private boolean adult;
-    @SerializedName("Overview")
-    private String Overview;
+    @SerializedName("overview")
+    private String overview;
     @SerializedName("release_date")
     private String release_date;
     @SerializedName("genre_ids")
@@ -159,7 +159,7 @@ public class MovieDetails implements Parcelable  {
         dest.writeList(genre_ids);
         dest.writeString(backdrop_path);
         dest.writeValue(adult);
-        dest.writeString(Overview);
+        dest.writeString(overview);
         dest.writeString(release_date);
     }
 

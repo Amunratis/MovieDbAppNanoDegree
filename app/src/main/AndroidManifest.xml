@@ -29,6 +29,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.sirth.moviedbappnanodegree.MainActivity" />
         </activity>
+
+
     </application>
+
 
 </manifest>
