@@ -1,7 +1,14 @@
 package com.example.sirth.moviedbappnanodegree;
 
 
+
+import android.content.Context;
 import android.content.DialogInterface;
+import android.database.Cursor;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
+
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,26 +23,29 @@ import android.widget.Toast;
 
 import com.example.sirth.moviedbappnanodegree.dataModel.MovieDetails;
 import com.example.sirth.moviedbappnanodegree.dataModel.MoviePages;
+import com.example.sirth.moviedbappnanodegree.database.MovieSqlProvider;
 import com.example.sirth.moviedbappnanodegree.networkUtil.ConnectionUtils;
 import com.example.sirth.moviedbappnanodegree.networkUtil.RetrofitClient;
 import com.example.sirth.moviedbappnanodegree.networkUtil.RetrofitService;
 import com.example.sirth.moviedbappnanodegree.view.RecyclerAdapters.MoviesAdapter;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity implements   LoaderManager.LoaderCallbacks<Cursor>
+         {
     private RecyclerView recyclerView;
-    private MoviesAdapter moviesAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
 
 
@@ -46,17 +56,20 @@ public class MainActivity extends AppCompatActivity {
         //Check whether if the Internet is turned on
         if (!ConnectionUtils.checkConnection(this)) {
             Toast.makeText(this, "No connection", Toast.LENGTH_LONG).show();}
-        getPopularMovies();
+
+            getPopularMovies();
+
 
     }
 
     void getPopularMovies(){
 
+
         try {
             RetrofitClient Client = new RetrofitClient();
             RetrofitService service = Client.getClient().create(RetrofitService.class);
 //TODO API KEY
-            Call<MoviePages> call = service.getPopularMovies("TODO");
+            Call<MoviePages> call = service.getPopularMovies("59c47dc89a1ad8f06326686f3ebe7b0a");
             call.enqueue(new Callback<MoviePages>() {
                 @Override
                 public void onResponse(Call<MoviePages> call, Response<MoviePages> response) {
@@ -85,8 +98,10 @@ public class MainActivity extends AppCompatActivity {
         try {
             RetrofitClient Client = new RetrofitClient();
             RetrofitService service = Client.getClient().create(RetrofitService.class);
-/*TODO API KEY*/
-            Call<MoviePages> call = service.getTopRated("TODO");
+
+            /*TODO API KEY*/
+
+            Call<MoviePages> call = service.getTopRated("59c47dc89a1ad8f06326686f3ebe7b0a");
             call.enqueue(new Callback<MoviePages>() {
                 @Override
                 public void onResponse(Call<MoviePages> call, Response<MoviePages> response) {
@@ -121,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.settings) {
 
-            final CharSequence sort[] = new CharSequence[]{"Top Rated", "Most Popular"};
+            final CharSequence sort[] = new CharSequence[]{"Top Rated", "Most Popular", "Favourite"};
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Sort By:");
@@ -136,12 +151,36 @@ public class MainActivity extends AppCompatActivity {
                 case 1:
                     getTopRatedMovies();
                     break;
+                case 2:
+                    getSupportLoaderManager().initLoader(1, null,MainActivity.this);
                }
                 }});
             builder.create().show();
         }
         return super.onOptionsItemSelected(item);
     }
-}
+
+             @Override
+             public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
+
+                 return new CursorLoader(getApplicationContext(), MovieSqlProvider.CONTENT_URI, null,
+                         null, null, null);
+             }
+
+
+
+             @Override
+             public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
+                 MoviesAdapter adapter = new MoviesAdapter(getApplicationContext(),cursor);
+                 recyclerView.setAdapter(adapter);
+                 adapter.notifyDataSetChanged();
+
+             }
+
+             @Override
+             public void onLoaderReset(Loader<Cursor> loader) {
+
+             }
+         }
 
 

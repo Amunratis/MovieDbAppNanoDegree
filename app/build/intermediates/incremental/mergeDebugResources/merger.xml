@@ -2035,7 +2035,7 @@
         <item>1</item>
         <item>2</item>
         <item>3</item>
-    </string-array><string-array name="multi_select_list_preference_default_value"/><string name="pref_title_system_sync_settings">System sync settings</string><string name="pref_header_notifications">Notifications</string><string name="pref_title_new_message_notifications">New message notifications</string><string name="pref_title_ringtone">Ringtone</string><string name="pref_ringtone_silent">Silent</string><string name="pref_title_vibrate">Vibrate</string><string name="poster">poster</string></file><file path="C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    </string-array><string-array name="multi_select_list_preference_default_value"/><string name="pref_title_system_sync_settings">System sync settings</string><string name="pref_header_notifications">Notifications</string><string name="pref_title_new_message_notifications">New message notifications</string><string name="pref_title_ringtone">Ringtone</string><string name="pref_ringtone_silent">Silent</string><string name="pref_title_vibrate">Vibrate</string><string name="poster">poster</string><string name="unfavourite">Unfavourite</string><string name="favourite">Favourite</string></file><file path="C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>

@@ -3,7 +3,7 @@
     package="com.example.sirth.moviedbappnanodegree.test" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="22"
         android:targetSdkVersion="26" />
 
     <instrumentation

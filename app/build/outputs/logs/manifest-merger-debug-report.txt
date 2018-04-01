@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-37:12
+ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-42:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\sirth\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7615050e6d81a464e12d7924784192c4\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\sirth\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\074814da7c5caeed4a73b27ef4dd7837\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\sirth\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\c302ce5d776550d1ab513ab2204803ac\AndroidManifest.xml:17:1-28:12
@@ -19,20 +19,20 @@ MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\sirth\.gr
 MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\sirth\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\e314311e7fae4a83030c469079696f06\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\sirth\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\af9e9515e05c7ab6232008b456b393b2\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\sirth\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6810ae773052de350fe046204778de33\AndroidManifest.xml:17:1-30:12
-INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-37:12
-INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-42:12
+INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-42:12
 	package
 		ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:3:5-53
 		INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-37:12
+		ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:1-42:12
 		INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:2:11-69
@@ -45,7 +45,7 @@ ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\Movie
 	android:name
 		ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:5:18-72
 application
-ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:7:5-34:19
+ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:7:5-39:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\sirth\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7615050e6d81a464e12d7924784192c4\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\sirth\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\7615050e6d81a464e12d7924784192c4\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\sirth\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\074814da7c5caeed4a73b27ef4dd7837\AndroidManifest.xml:25:5-29:19
@@ -118,6 +118,14 @@ ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\Movie
 		ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:30:17-84
 	android:name
 		ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:29:17-63
+provider#com.example.sirth.moviedbappnanodegree.database.MovieSqlProvider
+ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:33:9-36:40
+	android:authorities
+		ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:35:13-63
+	android:exported
+		ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:36:13-37
+	android:name
+		ADDED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml:34:13-54
 uses-sdk
 INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\sirth\OneDrive\Documents\GitHub\poloniex-api-java\Polo\MovieDbAppNanoDegree\app\src\main\AndroidManifest.xml

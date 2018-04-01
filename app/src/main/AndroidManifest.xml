@@ -30,6 +30,11 @@
                 android:value="com.example.sirth.moviedbappnanodegree.MainActivity" />
         </activity>
 
+        <provider
+            android:name=".database.MovieSqlProvider"
+            android:authorities="moviesapp.data.MovieProvider"
+            android:exported="false" />
+
 
     </application>
 

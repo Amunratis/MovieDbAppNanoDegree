@@ -1,4 +1,4 @@
-#Mon Mar 26 16:34:12 CEST 2018
+#Fri Mar 30 21:30:48 CEST 2018
 base.0=C\:\\Users\\sirth\\OneDrive\\Documents\\GitHub\\poloniex-api-java\\Polo\\MovieDbAppNanoDegree\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\6
 path.0=classes.dex
 renamed.0=classes.dex

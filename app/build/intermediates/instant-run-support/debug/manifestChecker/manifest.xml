@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="22"
         android:targetSdkVersion="26" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -36,6 +36,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.sirth.moviedbappnanodegree.MainActivity" />
         </activity>
+
+        <provider
+            android:name="com.example.sirth.moviedbappnanodegree.database.MovieSqlProvider"
+            android:authorities="moviesapp.data.MovieProvider"
+            android:exported="false" />
 
         <meta-data
             android:name="android.support.VERSION"
