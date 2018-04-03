@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\sirth\\OneDrive\\Documents\\GitHub\\poloniex-api-java\\Polo\\MovieDbAppNanoDegree\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\sirth\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\074814da7c5caeed4a73b27ef4dd7837\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\sirth\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\b982d34157b6358ebaebf432ee1ab22c\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\sirth\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\6d1b381ed7790b25c47d11f5552dd7f1\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\sirth\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\1af78ae28dc9c90ae82f35520aaa656c\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

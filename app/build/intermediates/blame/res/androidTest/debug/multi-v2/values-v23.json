@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\sirth\\OneDrive\\Documents\\GitHub\\poloniex-api-java\\Polo\\MovieDbAppNanoDegree\\app\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v23\\values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\sirth\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\074814da7c5caeed4a73b27ef4dd7837\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\sirth\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\b982d34157b6358ebaebf432ee1ab22c\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,19,32,33,34,35,36",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
@@ -15,7 +15,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\sirth\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-26.1.0.aar\\8a76f0d6253dffea2fa3a3c8e06df41d\\res\\values-v23\\values-v23.xml",
+                    "source": "C:\\Users\\sirth\\.gradle\\caches\\transforms-1\\files-1.1\\cardview-v7-26.1.0.aar\\dd31840202b862b851f5bc08e74a572a\\res\\values-v23\\values-v23.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

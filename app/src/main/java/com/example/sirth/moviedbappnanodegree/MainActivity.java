@@ -5,6 +5,8 @@ package com.example.sirth.moviedbappnanodegree;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.database.Cursor;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
@@ -24,7 +26,6 @@ import android.widget.Toast;
 import com.example.sirth.moviedbappnanodegree.dataModel.MovieDetails;
 import com.example.sirth.moviedbappnanodegree.dataModel.MoviePages;
 import com.example.sirth.moviedbappnanodegree.database.MovieSqlProvider;
-import com.example.sirth.moviedbappnanodegree.networkUtil.ConnectionUtils;
 import com.example.sirth.moviedbappnanodegree.networkUtil.RetrofitClient;
 import com.example.sirth.moviedbappnanodegree.networkUtil.RetrofitService;
 import com.example.sirth.moviedbappnanodegree.view.RecyclerAdapters.MoviesAdapter;
@@ -38,15 +39,13 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements   LoaderManager.LoaderCallbacks<Cursor>
          {
+
     private RecyclerView recyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-
 
 
         recyclerView=findViewById(R.id.recycler_view);
@@ -54,12 +53,20 @@ public class MainActivity extends AppCompatActivity implements   LoaderManager.L
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         //Check whether if the Internet is turned on
-        if (!ConnectionUtils.checkConnection(this)) {
+        if (!checkConnection(this)) {
             Toast.makeText(this, "No connection", Toast.LENGTH_LONG).show();}
-
             getPopularMovies();
 
+    }
 
+    public static boolean checkConnection(Context context) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo activeNetworkInfo = null;
+        if (connectivityManager != null) {
+            activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        }
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
     void getPopularMovies(){
@@ -69,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements   LoaderManager.L
             RetrofitClient Client = new RetrofitClient();
             RetrofitService service = Client.getClient().create(RetrofitService.class);
 //TODO API KEY
-            Call<MoviePages> call = service.getPopularMovies("59c47dc89a1ad8f06326686f3ebe7b0a");
+            Call<MoviePages> call = service.getPopularMovies("");
             call.enqueue(new Callback<MoviePages>() {
                 @Override
                 public void onResponse(Call<MoviePages> call, Response<MoviePages> response) {
@@ -101,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements   LoaderManager.L
 
             /*TODO API KEY*/
 
-            Call<MoviePages> call = service.getTopRated("59c47dc89a1ad8f06326686f3ebe7b0a");
+            Call<MoviePages> call = service.getTopRated("");
             call.enqueue(new Callback<MoviePages>() {
                 @Override
                 public void onResponse(Call<MoviePages> call, Response<MoviePages> response) {

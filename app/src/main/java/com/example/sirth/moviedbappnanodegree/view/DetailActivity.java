@@ -7,7 +7,12 @@ import android.os.Bundle;
 
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -18,10 +23,22 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.sirth.moviedbappnanodegree.R;
 import com.example.sirth.moviedbappnanodegree.dataModel.MovieDetails;
+import com.example.sirth.moviedbappnanodegree.dataModel.MovieReview;
+import com.example.sirth.moviedbappnanodegree.dataModel.MovieTrailer;
+
 import com.example.sirth.moviedbappnanodegree.database.MovieSqlProvider;
 import com.example.sirth.moviedbappnanodegree.database.MovieSqliteHelper;
+import com.example.sirth.moviedbappnanodegree.networkUtil.RetrofitClient;
+import com.example.sirth.moviedbappnanodegree.networkUtil.RetrofitService;
+import com.example.sirth.moviedbappnanodegree.view.RecyclerAdapters.ReviewsRecAdapter;
+import com.example.sirth.moviedbappnanodegree.view.RecyclerAdapters.TrailersRecAdapter;
 
+import java.util.List;
 import java.util.Locale;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class DetailActivity extends AppCompatActivity {
@@ -35,6 +52,14 @@ public class DetailActivity extends AppCompatActivity {
     String release_date;
     boolean flag;
     boolean firstClicked;
+    TrailersRecAdapter trailersRecAdapter;
+    ReviewsRecAdapter reviewsRecAdapter;
+    RecyclerView trailersRecyclerView;
+    RecyclerView reviewsRecyclerView;
+    MovieDetails movieDetails;
+    List<MovieTrailer.MovieVideos> trailerDetails;
+    List<MovieReview.MovieReviews> movieReviewsDetails;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +70,10 @@ public class DetailActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         final Button button=findViewById(R.id.favourites);
-        MovieDetails movieDetails=getIntent().getParcelableExtra("parcel");
-
-
+        movieDetails=getIntent().getParcelableExtra("parcel");
 
             if (getIntent().getParcelableExtra("parcel") != null) {
+
                 ID = String.valueOf(movieDetails.getId());
                 try (Cursor cursor = getContentResolver().query(MovieSqlProvider.CONTENT_URI, null,
                         MovieSqliteHelper._id + " = " + DatabaseUtils.sqlEscapeString(ID), null, null)) {
@@ -59,6 +83,8 @@ public class DetailActivity extends AppCompatActivity {
                 }
                  movieDetails = getIntent().getParcelableExtra("parcel");
                 initViewsFromParcelable(movieDetails);
+                getTrailers();
+                getReviews();
             } else {
                 ID = String.valueOf(getIntent().getExtras().getString("id"));
                 try (Cursor cursor = getContentResolver().query(MovieSqlProvider.CONTENT_URI, null,
@@ -154,6 +180,74 @@ public class DetailActivity extends AppCompatActivity {
        getContentResolver().insert(MovieSqlProvider.CONTENT_URI, contentValues);
 
     }
+    public  void  getReviews(){
+        reviewsRecyclerView=findViewById(R.id.reviewsRec);
+        reviewsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        reviewsRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        try {
+            RetrofitService service = RetrofitClient.getClient().create(RetrofitService.class);
+
+            //TODO API KEY
+
+
+            Call<MovieReview> call = service.getReviews(movieDetails.getId(),"");
+            call.enqueue(new Callback<MovieReview>() {
+                @Override
+                public void onResponse(Call<MovieReview> call, Response<MovieReview> response) {
+                    movieReviewsDetails = response.body().getResults();
+                    reviewsRecAdapter=new ReviewsRecAdapter(DetailActivity.this,  movieReviewsDetails);
+                    reviewsRecAdapter.notifyDataSetChanged();
+                    reviewsRecyclerView.setAdapter(reviewsRecAdapter);
+                }
+                @Override
+                public void onFailure(Call<MovieReview> call, Throwable t) {
+                    Log.d("Error", t.getMessage());
+                    Toast.makeText(DetailActivity.this, "Error Fetching Data!", Toast.LENGTH_LONG).show();
+                }
+            });
+        }
+
+        catch (Exception e){
+            Log.d("Error", e.getMessage());
+            Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void getTrailers(){
+        trailersRecyclerView =findViewById(R.id.trailers);
+        trailersRecyclerView.setLayoutManager(new GridLayoutManager(this, 5));
+        trailersRecyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        try {
+            RetrofitService service = RetrofitClient.getClient().create(RetrofitService.class);
+
+            //TODO API KEY
+
+
+            Call<MovieTrailer> call = service.getTrailers(movieDetails.getId(),"");
+            call.enqueue(new Callback<MovieTrailer>() {
+                @Override
+                public void onResponse(Call<MovieTrailer> call, Response<MovieTrailer> response) {
+
+                    trailerDetails = response.body().getResults();
+                    trailersRecAdapter=new TrailersRecAdapter(DetailActivity.this, trailerDetails);
+                    trailersRecAdapter.notifyDataSetChanged();
+                    trailersRecyclerView.setAdapter(trailersRecAdapter);
+                }
+                @Override
+                public void onFailure(Call<MovieTrailer> call, Throwable t) {
+                    Log.d("Error", t.getMessage());
+                    Toast.makeText(DetailActivity.this, "Error Fetching Data!", Toast.LENGTH_LONG).show();
+                }
+            });
+        }
+
+        catch (Exception e){
+            Log.d("Error", e.getMessage());
+            Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+        }
+
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -225,7 +319,6 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Toast.makeText(this,"onDestroy",Toast.LENGTH_LONG).show();
         if(flag==true){unfavourite();}
 
     }

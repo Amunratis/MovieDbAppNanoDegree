@@ -121,7 +121,7 @@ public class MovieDetails implements Parcelable  {
     @SerializedName("genre_ids")
     private List<Integer> genre_ids = new ArrayList<Integer>();
     @SerializedName("id")
-    private Integer id;
+    private int id;
     @SerializedName("original_title")
     private String original_title;
     @SerializedName("original_language")

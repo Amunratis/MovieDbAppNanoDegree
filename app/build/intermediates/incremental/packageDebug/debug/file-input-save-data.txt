@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Mar 29 22:29:57 CEST 2018
+#Tue Apr 03 01:15:20 CEST 2018
 2.base=C\:\\Users\\sirth\\OneDrive\\Documents\\GitHub\\poloniex-api-java\\Polo\\MovieDbAppNanoDegree\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
 5.set=DEX
 0.path=classes.dex

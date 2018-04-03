@@ -82,8 +82,9 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.Movies> {
 
         public Movies(View view){
          super(view);
-        imageView=view.findViewById(R.id.poster);
-        view.setOnClickListener(new View.OnClickListener(){
+
+         imageView=view.findViewById(R.id.poster);
+         view.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 int Position = getAdapterPosition();
